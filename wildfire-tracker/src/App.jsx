@@ -1,12 +1,12 @@
-import  MapView  from './components/Map'
-
+//import  MapView  from './components/Map'
+import Map from './components/Map2'
 function App() {
   
 
   return (
     
     <div className="app">
-      <MapView />
+      <Map />
     </div>
           
   )
