@@ -1,14 +1,12 @@
-import { useState } from 'react'
-
-
+import  MapView  from './components/Map'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     
-    <div className="hero">
-      <h1>Welcome to my first app :D</h1>
+    <div className="app">
+      <MapView />
     </div>
           
   )
