@@ -11,9 +11,11 @@ const MapView = () => {
 
   useEffect(() => {
     const map = new OLMap({
-      target: mapDivRef.current,
-      layers: [new TileLayer({ source: new OSM() })],
-      view: new View({
+      target: mapDivRef.current, //the container for the map
+      layers: [
+        new TileLayer({ //map tiles
+          source: new OSM() })],
+      view: new View({ //fetches layer sources
         center: fromLonLat([-114.7948, 57.6724]), // [lon, lat], Alberta
         zoom: 6,
       }),
