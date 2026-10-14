@@ -1,5 +1,6 @@
 //import  MapView  from './components/Map'
-import Map from "./components/Map2";
+import Map from "./components/Map";
+
 function App() {
   return (
     <div className="app">

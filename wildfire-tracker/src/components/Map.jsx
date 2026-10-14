@@ -1,27 +1,30 @@
-import { MapContainer, TileLayer } from 'react-leaflet'
-import 'leaflet/dist/leaflet.css'
+import { useEffect, useRef } from 'react'
+import OLMap from 'ol/Map.js'
+import OSM from 'ol/source/OSM.js'
+import TileLayer from 'ol/layer/Tile.js'
+import View from 'ol/View.js'
+import { fromLonLat } from 'ol/proj.js'
+import 'ol/ol.css'
 
-const MapView = ({center, zoom}) => {
-  return (
-    <div className="map">
-        <MapContainer center={center} zoom={zoom} style={{ height: '100%', width: '100%' }}>
-            <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://api.maptiler.com/maps/base-v4/256/{z}/{x}/{y}.png?key=SJahobuBym7ct9PZWuoN"
-            />
-        </MapContainer>
+const MapView = () => {
+  const mapDivRef = useRef(null)
 
-    </div>
-  )
-}
+  useEffect(() => {
+    const map = new OLMap({
+      target: mapDivRef.current, //the container for the map
+      layers: [
+        new TileLayer({ //map tiles
+          source: new OSM() })],
+      view: new View({ //fetches layer sources
+        center: fromLonLat([-114.7948, 57.6724]), // [lon, lat], Alberta
+        zoom: 6,
+      }),
+    })
 
-MapView.defaultProps = {
-    //currently set center as Alberta, CA
-    center: {
-        lat: 57.6724,
-        lng: -114.7948
-    },
-    zoom: 5
+    return () => map.setTarget(undefined) // cleanup
+  }, [])
+
+  return <div ref={mapDivRef} className="map" />
 }
 
 export default MapView
