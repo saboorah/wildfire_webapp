@@ -1,7 +1,8 @@
-import { MapContainer, TileLayer } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-const MapView = ({ center = [57.6724, -114.7948], zoom = 6 }) => {
+const pos = [57.6724, -114.7948];
+const MapView = ({ center = pos, zoom = 6 }) => {
   return (
     <div className="map">
       <MapContainer
@@ -13,6 +14,12 @@ const MapView = ({ center = [57.6724, -114.7948], zoom = 6 }) => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+
+        <Marker position={pos}>
+          <Popup>
+            A pretty CSS3 popup. <br /> Easily customizable.
+          </Popup>
+        </Marker>
       </MapContainer>
     </div>
   );
