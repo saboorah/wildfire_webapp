@@ -3,8 +3,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.map{
+.map {
   width: 100vw;
   height: 100vh;
   position: relative;
+}
+
+.location_icon {
+  font-size: 2rem;
+  color: red;
 }
