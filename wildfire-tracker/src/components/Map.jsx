@@ -7,6 +7,9 @@ const customIcon = new Icon({
   iconSize: [15, 15],
 });
 
+//import api key
+const key = import.meta.env.STADIA_API_KEY;
+
 //loop trough event data
 //create list of wildfire marker objects with coordinates and descriptions from NASA EONET
 const MapView = ({ center, zoom, eventData }) => {
@@ -37,7 +40,7 @@ const MapView = ({ center, zoom, eventData }) => {
           &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> 
           &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>
           &copy; <a href="https://www.flaticon.com/free-icons/fire" title="fire icons">Fire icons created by Magnific - Flaticon</a> contributors'
-          url="https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png"
+          url={`https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png?api_key=${key}`}
         />
 
         {/*display fire markers with descriptions*/}
