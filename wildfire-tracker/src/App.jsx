@@ -13,15 +13,20 @@ function App() {
       const { events } = await res.json();
 
       setEventData(events);
-      setLoading[false]; //finihed fetching API data
+      setLoading(false); //finihed fetching API data
       //console.log(events[0].categories[0].title);
+      //console.log(events[0].geometries[0].coordinates);
     };
     fetchEvents();
   }, []);
 
   return (
     <div className="app">
-      <Map />
+      {!loading ? (
+        <Map center={[57.6724, -114.7948]} zoom={4} eventData={eventData} />
+      ) : (
+        <h3>Loading...</h3>
+      )}
     </div>
   );
 }
