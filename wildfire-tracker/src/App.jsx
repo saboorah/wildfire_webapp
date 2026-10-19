@@ -18,11 +18,12 @@ function App() {
   }, []);
 
   return (
+    //display map, set loading screen while API fetches data
     <div className="app">
       {!loading ? (
         <Map center={[39.0175, -102.1359]} zoom={4} eventData={eventData} />
       ) : (
-        <h3>Loading...</h3>
+        <h4> Loading...</h4>
       )}
     </div>
   );
