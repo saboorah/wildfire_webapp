@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="app">
       {!loading ? (
-        <Map center={[57.6724, -114.7948]} zoom={4} eventData={eventData} />
+        <Map center={[39.0175, -102.1359]} zoom={4} eventData={eventData} />
       ) : (
         <h3>Loading...</h3>
       )}
