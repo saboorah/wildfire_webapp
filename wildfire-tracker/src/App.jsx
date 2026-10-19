@@ -16,7 +16,7 @@ function App() {
       setLoading[false]; //finihed fetching API data
       //console.log(events[0].categories[0].title);
     };
-    //fetchEvents();
+    fetchEvents();
   }, []);
 
   return (
