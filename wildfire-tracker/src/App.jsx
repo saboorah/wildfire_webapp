@@ -2,7 +2,6 @@ import Map from "./components/Map";
 import { useState, useEffect } from "react";
 
 function App() {
-  //const URL = "https://eonet.gsfc.nasa.gov/api/v2.1/events";
   const [eventData, setEventData] = useState([]); //store wildfire events from NASA API
   const [loading, setLoading] = useState(false); //flag for fetching API data
 
@@ -14,8 +13,6 @@ function App() {
 
       setEventData(events);
       setLoading(false); //finihed fetching API data
-      //console.log(events[0].categories[0].title);
-      //console.log(events[0].geometries[0].coordinates);
     };
     fetchEvents();
   }, []);
