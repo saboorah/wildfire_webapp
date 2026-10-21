@@ -1,6 +1,6 @@
 # [Wildfire Tracker](https://wildfire-webapp-ghm1.vercel.app/)
 ---
-A website that tracks active wildfies in near real time
+A website that tracks active wildfies in near real-time
 ---
 ![Wildfire Tracker](docs/WildfireTracker.png)
 ---
