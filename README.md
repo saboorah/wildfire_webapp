@@ -2,7 +2,7 @@
 ---
 A website that tracks active wildfies in near real time
 ---
-![Wildfire Tracker](docs/WildfireTracker.png)
+![Wildfire Tracker](main/docs/WildfireTracker.png)
 ---
 ## Features
 - Interactive map of active wildfires
