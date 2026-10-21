@@ -8,7 +8,7 @@ A website that tracks active wildfies in near real-time
 - Interactive map of active wildfires
 - Click fire icons for location and desciption from NASA EONET API
 ---
-Tech Stack 
+## Tech Stack 
 - React
 - Leaflet
 - Node.js
