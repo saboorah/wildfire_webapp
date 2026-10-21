@@ -2,7 +2,7 @@
 ---
 A website that tracks active wildfies in near real time
 ---
-![Wildfire Tracker](main/docs/WildfireTracker.png)
+![Wildfire Tracker](wildfire_webapp/docs/WildfireTracker.png)
 ---
 ## Features
 - Interactive map of active wildfires
@@ -12,5 +12,5 @@ Tech Stack
 - React
 - Leaflet
 - Node.js
-- ** API's**: NASA EONET, Stadia Maps
+- **API's**: NASA EONET, Stadia Maps
   
