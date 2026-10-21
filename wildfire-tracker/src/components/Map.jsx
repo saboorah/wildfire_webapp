@@ -47,7 +47,7 @@ const MapView = ({ center, zoom, eventData }) => {
         {markers.map((m) => (
           <Marker position={m.coordinate} icon={customIcon}>
             <Popup>
-              {m.title} <br /> {m.description}
+              {m.coordinate} <br /> {m.title} <br /> {m.description}
             </Popup>
           </Marker>
         ))}
